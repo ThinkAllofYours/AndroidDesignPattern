@@ -10,7 +10,7 @@ public abstract class AbstConnectHelper {
     abstract protected int authorization(String userName);
     abstract protected String connection(String info);
 
-    //여기안에 들어있는 로직은 
+    //여기안에 들어있는 로직은
     public String requestConnection(String info){
         String id,password, userName, decodeInfo, userInfo;
 
