@@ -11,7 +11,7 @@ import static junit.framework.Assert.assertEquals;
  * Created by lyder on 2017-04-28.
  */
 
-public class Ch03_TemplateMethodPattern {
+public class Ch03_TemplateMethodTest {
 
     @Test
     public void testTemplateMethod01(){
