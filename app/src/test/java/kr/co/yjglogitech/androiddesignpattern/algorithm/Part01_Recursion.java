@@ -9,13 +9,14 @@ import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Recursive_pr
 import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Solution;
 
 import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertArrayEquals;
 
 /**
  * Created by landr on 2017. 5. 14..
  */
 
 
-public class Part01_Recursive {
+public class Part01_Recursion {
 
     Recursive _recursive;
     Recursive_prac _recursive_prac;
@@ -87,10 +88,10 @@ public class Part01_Recursive {
 
     @Test
     public void Test_Quick_Sort() {
-        int[] data = {5, 6, 3, 2, 1, 6, 7, 9, 8, 10};
+        int[] data = {11, 6, 3, 3, 6, 7, 9, 8, 10, 1, 12, 5, 15};
         _recursive.quickSort(data, 0, data.length - 1);
-        int[] sortData = {1, 2, 3, 5, 6, 6, 7, 8, 9, 10};
-        assertEquals(sortData, data);
+        int[] sortData = {1, 3, 3, 5, 6, 6, 7, 8, 9, 10, 11, 12, 15};
+        assertArrayEquals(sortData, data);
     }
 
     @Test
@@ -99,10 +100,10 @@ public class Part01_Recursive {
         int case02 = 2;
         int case03 = 50;
 
-        Solution _solution = new Solution();
-        int result01 = _solution.climbStairs(case01);
-        int result02 = _solution.climbStairs(case02);
-        int result03 = _solution.climbStairs(case03);
+        Solution _sol = new Solution();
+        int result01 = _sol.climbStairs(case01);
+        int result02 = _sol.climbStairs(case02);
+        int result03 = _sol.climbStairs(case03);
 
         assertEquals(1, result01);
         assertEquals(2, result02);

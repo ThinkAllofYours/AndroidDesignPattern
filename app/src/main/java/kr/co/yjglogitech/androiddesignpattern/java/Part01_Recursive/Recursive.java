@@ -1,5 +1,7 @@
 package kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive;
 
+import java.util.ArrayList;
+
 /**
  * Created by landr on 2017. 5. 14..
  */
@@ -122,48 +124,6 @@ public class Recursive {
         }
     }
 
-<<<<<<< HEAD
-    /**
-     *       public static int Partition(int[] numbers, int left, int right)
-     {
-     int pivot = numbers[left];
-     while (true)
-     {
-     while (numbers[left] < pivot)
-     left++;
-
-     while (numbers[right] > pivot)
-     right--;
-
-     if (left < right)
-     {
-     int temp = numbers[right];
-     numbers[right] = numbers[left];
-     numbers[left] = temp;
-     }
-     else
-     {
-     return right;
-     }
-     }
-     }
-
-     public static void QuickSort_Recursive(int[] arr, int left, int right)
-     {
-     // For Recusrion
-     if(left < right)
-     {
-     int pivot = Partition(arr, left, right);
-
-     if(pivot > 1)
-     QuickSort_Recursive(arr, left, pivot - 1);
-
-     if(pivot + 1 < right)
-     QuickSort_Recursive(arr, pivot + 1, right);
-     }
-     }
-     */
-=======
     public void quickSort(int[] data, int begin, int end){
 
         if(begin<end){
@@ -174,29 +134,26 @@ public class Recursive {
 
             while(left<right) {
 
-                while (pivot > data[left]) {
+                while (left < right && pivot > data[left]) {
                     left++;
                 }
                 while (pivot < data[right]) {
                     right--;
                 }
 
-                if(left<=right){
-                    int temp = data[left];
-                    data[left] = data[right];
-                    data[right] = temp;
+                int temp = data[left];
+                data[left] = data[right];
+                data[right] = temp;
+
+                if(data[left]==data[right]){
                     left++;
-                    right--;
                 }
 
             }
 
-//            data[begin] = data[left];
-//            data[left] = pivot;
-            quickSort(data,begin, left-1);
-            quickSort(data, left+1, end);
+            quickSort(data, begin, right-1);
+            quickSort(data, right+1, end);
         }
     }
 
->>>>>>> 549054f7916b0087fb9dd7b227426810442d29df
 }
