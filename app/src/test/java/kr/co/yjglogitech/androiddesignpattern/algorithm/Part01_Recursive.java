@@ -1,4 +1,4 @@
-package kr.co.yjglogitech.androiddesignpattern;
+package kr.co.yjglogitech.androiddesignpattern.algorithm;
 
 
 import org.junit.Before;
@@ -65,6 +65,13 @@ public class Part01_Recursive {
         int result02 = _recursive.findMax02(data, 0, data.length-1);
         assertEquals(300, result02);
     }
+
+    @Test
+    public void Test_Recursive(){
+
+    }
+
+
 
 
 

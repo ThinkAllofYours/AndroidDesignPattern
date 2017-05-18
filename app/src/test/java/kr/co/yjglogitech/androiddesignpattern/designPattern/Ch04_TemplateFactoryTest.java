@@ -1,4 +1,4 @@
-package kr.co.yjglogitech.androiddesignpattern;
+package kr.co.yjglogitech.androiddesignpattern.designPattern;
 
 import org.junit.Test;
 
