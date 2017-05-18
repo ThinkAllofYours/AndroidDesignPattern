@@ -1,7 +1,5 @@
 package kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive;
 
-import kr.co.yjglogitech.androiddesignpattern.java.ch01_StrategyPattern.Session01.Plus;
-
 /**
  * Created by landr on 2017. 5. 14..
  */
@@ -124,6 +122,7 @@ public class Recursive {
         }
     }
 
+<<<<<<< HEAD
     /**
      *       public static int Partition(int[] numbers, int left, int right)
      {
@@ -164,4 +163,40 @@ public class Recursive {
      }
      }
      */
+=======
+    public void quickSort(int[] data, int begin, int end){
+
+        if(begin<end){
+
+            int left = begin;
+            int right= end;
+            int pivot = data[begin];
+
+            while(left<right) {
+
+                while (pivot > data[left]) {
+                    left++;
+                }
+                while (pivot < data[right]) {
+                    right--;
+                }
+
+                if(left<=right){
+                    int temp = data[left];
+                    data[left] = data[right];
+                    data[right] = temp;
+                    left++;
+                    right--;
+                }
+
+            }
+
+//            data[begin] = data[left];
+//            data[left] = pivot;
+            quickSort(data,begin, left-1);
+            quickSort(data, left+1, end);
+        }
+    }
+
+>>>>>>> 549054f7916b0087fb9dd7b227426810442d29df
 }

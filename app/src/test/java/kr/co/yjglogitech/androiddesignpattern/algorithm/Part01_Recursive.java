@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Recursive;
+import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Recursive_prac;
+import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Solution;
 
 import static junit.framework.Assert.assertEquals;
 
@@ -16,11 +18,19 @@ import static junit.framework.Assert.assertEquals;
 public class Part01_Recursive {
 
     Recursive _recursive;
+    Recursive_prac _recursive_prac;
     @Before
     public void creator(){
+        _recursive_prac = new Recursive_prac();
         _recursive = new Recursive();
     }
 
+    @Test
+    public void basicRecursive_prac(){
+        //assertEquals(55, _recursive_prac.sumNum(10));
+
+        _recursive_prac.function();
+    }
     @Test
     public void basicRecursive(){
         //sum, 시에르 핀스키의 삼각형
@@ -35,8 +45,8 @@ public class Part01_Recursive {
         //
         int[] data = {1, 2, 3, 4, 5, 6, 11, 23, 52, 21, 33};
         int size = data.length;
-
-        int result01 = _recursive.search(data, data.length, 11);
+        int target01 = 11;
+        int result01 = _recursive.search(data, data.length, target01);
 
         assertEquals(6, result01);
 
@@ -54,6 +64,15 @@ public class Part01_Recursive {
         int[] data = {1,2,3,4,5,6,7,8,10,11,12,32,43,100};
         int result = _recursive.search02(data, 0, data.length-1, 32);
         assertEquals(11, result);
+
+        //binary
+        String[] items = {"임도경", "김진규", "정이슬", "정아름", "홍선기"};
+        //선정렬
+        String targetString = "김진규";
+
+
+        int[] itemsSort = {1,2,3,5,6,7,8,9,10,11,12,13,14};
+        int targetNum = 13;
     }
 
     @Test
@@ -67,13 +86,30 @@ public class Part01_Recursive {
     }
 
     @Test
-    public void Test_Recursive(){
-
+    public void Test_Quick_Sort() {
+        int[] data = {5, 6, 3, 2, 1, 6, 7, 9, 8, 10};
+        _recursive.quickSort(data, 0, data.length - 1);
+        int[] sortData = {1, 2, 3, 5, 6, 6, 7, 8, 9, 10};
+        assertEquals(sortData, data);
     }
 
+    @Test
+    public void LeetCode_70_climbStairs(){
+        int case01 = 1;
+        int case02 = 2;
+        int case03 = 50;
+
+        Solution _solution = new Solution();
+        int result01 = _solution.climbStairs(case01);
+        int result02 = _solution.climbStairs(case02);
+        int result03 = _solution.climbStairs(case03);
+
+        assertEquals(1, result01);
+        assertEquals(2, result02);
+        assertEquals(50, result03);
 
 
-
+    }
 
 
 }
