@@ -1,5 +1,6 @@
 package kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -83,6 +84,50 @@ public class Solution {
             }
         }
         return islands *4 - neighbours*2;
+    }
+
+
+    //================ algospot Weird Numbers ===================
+    public boolean blnResult = false;
+    ArrayList<String>  resultArr = new ArrayList<String>();
+    public void judgementWeird(ArrayList<Integer> divisors, int sum, int num, int idx){
+
+        if(sum == num){
+            blnResult = true;
+            return;
+        }else if(sum < num && idx < divisors.size()){
+            for(int start_idx = idx; start_idx < divisors.size(); start_idx++){
+                int nextSum = sum + divisors.get(start_idx);
+                judgementWeird(divisors, nextSum, num, start_idx+1);
+            }
+        }
+
+    }
+
+    public String find_weirdNum(int num){
+        blnResult = false;
+        ArrayList<Integer> divisors = new ArrayList<>();
+        for(int i = 1; i <= num/2 ; i++){
+            if(num%i==0){
+                divisors.add(i);
+            }
+        }
+        int sum_divisors = 0;
+        for(int i : divisors){
+            sum_divisors += i;
+        }
+        if(sum_divisors <= num)
+            return "not weird";
+
+        for(int startIdx = 0; startIdx < divisors.size()-1; startIdx++ ){
+            judgementWeird(divisors, divisors.get(startIdx), num, startIdx+1);
+        }
+
+        if(blnResult==true){
+            return "not weird";
+        }else {
+            return "weird";
+        }
     }
 
 }

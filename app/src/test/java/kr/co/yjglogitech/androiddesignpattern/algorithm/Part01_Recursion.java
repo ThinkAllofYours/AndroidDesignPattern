@@ -4,6 +4,7 @@ package kr.co.yjglogitech.androiddesignpattern.algorithm;
 import org.junit.Before;
 import org.junit.Test;
 
+import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Main;
 import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Recursive;
 import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Recursive_prac;
 import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Solution;
@@ -121,6 +122,17 @@ public class Part01_Recursion {
         int result = _sol.islandperimeter(grid);
 
         assertEquals(16, result);
+    }
+
+    @Test
+    public void algospot_Weird_Number(){
+        int num1 = 12;
+        int num2 = 70;
+
+        Solution _sol = new Solution();
+
+        assertEquals("not weird", _sol.find_weirdNum(num1));
+        assertEquals("weird", _sol.find_weirdNum(num2));
     }
 
 
