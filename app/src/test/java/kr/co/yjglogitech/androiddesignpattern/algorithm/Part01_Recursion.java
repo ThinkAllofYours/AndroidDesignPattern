@@ -108,8 +108,19 @@ public class Part01_Recursion {
         assertEquals(1, result01);
         assertEquals(2, result02);
         assertEquals(50, result03);
+    }
 
+    @Test
+    public void LeetCode_463_islandPerimeter(){
+        int[][] grid = {{0,1,0,0},
+                        {1,1,1,0},
+                        {0,1,0,0},
+                        {1,1,0,0}};
 
+        Solution _sol = new Solution();
+        int result = _sol.islandperimeter(grid);
+
+        assertEquals(16, result);
     }
 
 
