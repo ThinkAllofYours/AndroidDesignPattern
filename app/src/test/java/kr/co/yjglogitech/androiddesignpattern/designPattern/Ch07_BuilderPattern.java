@@ -37,8 +37,7 @@ public class Ch07_BuilderPattern {
     public void builder_pattern_01(){
         PersonInfoBuilder personInfoBuilder = new PersonInfoBuilder();
 
-        PersonInfo result = personInfoBuilder
-                .setAge(12)
+        PersonInfo result = personInfoBuilder.setAge(12)
                 .setName("Bob")
                 .setFavoriteAnimal("dog")
                 .setFavoriteColor("blue")

@@ -98,24 +98,44 @@ public class Part01_Recursion {
     public void LeetCode_70_climbStairs(){
         int case01 = 1;
         int case02 = 2;
-        //int case03 = 44;
+        int case03 = 44;
         //int case04 = 45;
         int case05 = 46;
 
         Solution _sol = new Solution();
         int result01 = _sol.climbStairs(case01);
         int result02 = _sol.climbStairs(case02);
-        //int result03 = _sol.climbStairs(case03);
+        int result03 = _sol.climbStairs(case03);
         //int result04 = _sol.climbStairs(case04);
         int result05 = _sol.climbStairs(case05);
 
         assertEquals(1, result01);
         assertEquals(2, result02);
-        //assertEquals(50, result03);
-        //assertEquals(50, result04);
-        assertEquals(50, result05);
+        assertEquals(50, result03);
+    }
 
+    @Test
+    public void LeetCode_463_islandPerimeter(){
+        int[][] grid = {{0,1,0,0},
+                        {1,1,1,0},
+                        {0,1,0,0},
+                        {1,1,0,0}};
 
+        Solution _sol = new Solution();
+        int result = _sol.islandperimeter(grid);
+
+        assertEquals(16, result);
+    }
+
+    @Test
+    public void algospot_Weird_Number(){
+        int num1 = 12;
+        int num2 = 70;
+
+        Solution _sol = new Solution();
+
+        assertEquals("not weird", _sol.find_weirdNum(num1));
+        assertEquals("weird", _sol.find_weirdNum(num2));
     }
 
 
