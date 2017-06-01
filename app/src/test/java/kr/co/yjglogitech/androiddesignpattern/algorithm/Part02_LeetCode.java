@@ -6,10 +6,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import kr.co.yjglogitech.androiddesignpattern.java.Part02_LeetCode.Solution_168;
+import kr.co.yjglogitech.androiddesignpattern.java.Part02_LeetCode.Solution_234;
 import kr.co.yjglogitech.androiddesignpattern.java.Part02_LeetCode.Solution_401;
+import kr.co.yjglogitech.androiddesignpattern.java.Part02_LeetCode.leetCode_classes.ListNode;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
@@ -28,5 +30,34 @@ public class Part02_LeetCode {
 
         assertThat(actual, is(solution_2ms.readBinaryWatch(4)));
 
+    }
+
+    @Test
+    public void testSolution_168(){
+        Solution_168 solution_168 = new Solution_168();
+//        String result01 = solution_168.convertToTitle(26);
+//        String result02 = solution_168.convertToTitle(52);
+//        String result03 = solution_168.convertToTitle(27);
+//        String result04 = solution_168.convertToTitle(53);
+        String result05 = solution_168.convertToTitle(703);
+
+//        assertEquals("Z", result01);
+//        assertEquals("AZ", result02);
+//        assertEquals("AA", result03);
+//        assertEquals("BA", result04);
+
+    }
+
+    @Test
+    public void testSolution_234(){
+        Solution_234 solution_234 = new Solution_234();
+
+        ListNode node1 = new ListNode(-126);
+        ListNode node2 = new ListNode(-126);
+
+        node1.next = node2;
+
+
+        assertEquals(solution_234.isPalindrome(node1), true);
     }
 }
