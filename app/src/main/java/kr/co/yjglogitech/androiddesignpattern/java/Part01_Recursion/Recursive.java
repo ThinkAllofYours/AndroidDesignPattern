@@ -1,6 +1,4 @@
-package kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive;
-
-import java.util.ArrayList;
+package kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursion;
 
 /**
  * Created by landr on 2017. 5. 14..
@@ -137,6 +135,7 @@ public class Recursive {
                 while (left < right && pivot > data[left]) {
                     left++;
                 }
+
                 while (pivot < data[right]) {
                     right--;
                 }

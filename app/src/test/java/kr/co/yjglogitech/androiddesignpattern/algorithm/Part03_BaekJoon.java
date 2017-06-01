@@ -8,7 +8,7 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Main;
+import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursion.Main;
 
 
 public class Part03_BaekJoon {
@@ -29,6 +29,6 @@ public class Part03_BaekJoon {
         Assert.assertEquals(-1, result04);
         Assert.assertEquals(0, result05);
         Assert.assertEquals(1, result06);
-
     }
+
 }

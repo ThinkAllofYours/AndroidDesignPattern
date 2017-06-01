@@ -4,10 +4,9 @@ package kr.co.yjglogitech.androiddesignpattern.algorithm;
 import org.junit.Before;
 import org.junit.Test;
 
-import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Main;
-import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Recursive;
-import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Recursive_prac;
-import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive.Solution;
+import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursion.Recursive;
+import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursion.Recursive_prac;
+import kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursion.Solution;
 
 import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.assertArrayEquals;
@@ -99,12 +98,16 @@ public class Part01_Recursion {
     public void LeetCode_70_climbStairs(){
         int case01 = 1;
         int case02 = 2;
-        int case03 = 50;
+        int case03 = 44;
+        //int case04 = 45;
+        int case05 = 46;
 
         Solution _sol = new Solution();
         int result01 = _sol.climbStairs(case01);
         int result02 = _sol.climbStairs(case02);
         int result03 = _sol.climbStairs(case03);
+        //int result04 = _sol.climbStairs(case04);
+        int result05 = _sol.climbStairs(case05);
 
         assertEquals(1, result01);
         assertEquals(2, result02);

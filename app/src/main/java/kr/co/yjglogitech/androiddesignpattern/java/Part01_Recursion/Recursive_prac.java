@@ -1,4 +1,4 @@
-package kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive;
+package kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursion;
 
 /**
  * Created by lyder on 2017-05-15.

@@ -1,4 +1,4 @@
-package kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive;
+package kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursion;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,13 +12,17 @@ public class Solution {
     private int result;
 
     public int climbStairs(int n) {
+
         if (n < 2)
             return 1;
+
         if (_map.containsKey(n)) {
             return _map.get(n);
         }
+
         result = climbStairs(n - 1) + climbStairs(n - 2);
         _map.put(n, result);
+
         return result;
     }
 

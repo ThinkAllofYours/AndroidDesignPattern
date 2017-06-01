@@ -2,7 +2,6 @@ package kr.co.yjglogitech.androiddesignpattern.algorithm;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -32,24 +31,9 @@ public class Part02_LeetCode {
 
     }
 
-    @Test
-    public void testSolution_168(){
-        Solution_168 solution_168 = new Solution_168();
-//        String result01 = solution_168.convertToTitle(26);
-//        String result02 = solution_168.convertToTitle(52);
-//        String result03 = solution_168.convertToTitle(27);
-//        String result04 = solution_168.convertToTitle(53);
-        String result05 = solution_168.convertToTitle(703);
-
-//        assertEquals("Z", result01);
-//        assertEquals("AZ", result02);
-//        assertEquals("AA", result03);
-//        assertEquals("BA", result04);
-
-    }
 
     @Test
-    public void testSolution_234(){
+    public void testSolution_234() {
         Solution_234 solution_234 = new Solution_234();
 
         ListNode node1 = new ListNode(-126);
@@ -60,4 +44,27 @@ public class Part02_LeetCode {
 
         assertEquals(solution_234.isPalindrome(node1), true);
     }
+
+    public void testAscii(){
+        int plus = 2;
+        char a = (char) (65 + plus);
+        char b = 20;
+        String str = String.valueOf(a) ;
+        assertEquals("C", str);
+
+        int check = 703%26;
+        assertEquals(26, check);
+    }
+
+    @Test
+    public void testLeetCode_168(){
+        Solution_168 _sol = new Solution_168();
+        //String result01 = _sol.convertToTitle(703);
+        //String result02 = _sol.convertToTitle(27);
+        String result03 = _sol.convertToTitle(52);
+        //assertEquals("ACB", result01);
+        //assertEquals("AA", result02);
+        assertEquals("AZ", result03);
+    }
 }
+
