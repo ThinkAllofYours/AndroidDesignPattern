@@ -3,6 +3,7 @@ package kr.co.yjglogitech.androiddesignpattern.java.Part01_Recursive;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Created by landr on 2017. 5. 22..
@@ -80,15 +81,13 @@ public class Main {
                 double minus_r1_r2 = Math.abs(r1 - r2);
                 int comparePlus = Double.compare(dist, plus_r1_r2);
                 int compareMinus = Double.compare(dist, minus_r1_r2);
-
+                //1.0000010 //1.000001
                 if(compareMinus == 1 && comparePlus == -1) {
                     sb.append("2\n");
-                }else if((compareMinus == 0 && Double.compare(r1, r2)!=0) || comparePlus == 0){
+                }else if(compareMinus == 0  || comparePlus == 0){
                     sb.append("1\n");
-                }else if((compareMinus == -1 && Double.compare(r1, r2)!=0) || comparePlus == 1){
+                }else{
                     sb.append("0\n");
-                }else {
-                    sb.append("-1\n");
                 }
             }
         }

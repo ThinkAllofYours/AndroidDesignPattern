@@ -29,6 +29,6 @@ public class Part03_BaekJoon {
         Assert.assertEquals(-1, result04);
         Assert.assertEquals(0, result05);
         Assert.assertEquals(1, result06);
-
     }
+
 }
